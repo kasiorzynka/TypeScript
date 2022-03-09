@@ -1,13 +1,9 @@
-//tsc
-//npm run compile
-
 const taskNameInputElement: HTMLInputElement = document.querySelector("#name");
 const addButtonElement: HTMLButtonElement = document.querySelector("button");
 const tasksContainerElement: HTMLElement = document.querySelector(".tasks");
 const categoriesContainerElement: HTMLElement =
   document.querySelector(".categories");
 
-//const selectedCategory: Category = selectedRadioElement.value as Category; //Aliasy Type casting
 let selectedCategory: Category;
 
 //Type aliasing
@@ -20,9 +16,7 @@ interface Task {
 }
 
 const categories: Category[] = ["general", "work", "gym", "hobby"];
-//const categories: string[] = ["general", "work", "gym", "hobby"];
 
-//const tasks: { title: string; done: boolean }[] = [
 const tasks: Task[] = [
   { title: "Wyrzucić śmieci", done: false },
   { title: "Pójść na tańce", done: true, category: "hobby" },
@@ -101,51 +95,3 @@ addTask({ title: "Wrzutka", done: false, category: "work" });
 renderCategories();
 console.log("Kategoria");
 render();
-
-/*
-const addButtonElement = document.querySelector("button");
-
-const calculatePrice = (originalPrice: number, hasDiscount: boolean) => {
-  return hasDiscount ? originalPrice * 0.8 : originalPrice;
-};
-
-addButtonElement.addEventListener("click", () => {
-  const originalPrice: number = 100;
-  const hasDiscount: boolean =
-    new URLSearchParams(window.location.search).get("discount") === "true";
-  console.log(calculatePrice(originalPrice, hasDiscount));
-});
-*/
-//console.log("Test1");
-
-//let age: number = 31;
-
-//let age = 29;
-/*
-let age;
-age = "testttt";
-age = 3;
-console.log(age);
-
-const logAge = (age: number | string) =>{ //union type
-    console.log(`Hej mam ${age} lat!`)
-}
-
-logAge(31);
-logAge("trzydzieści jeden");
-*/
-//console.log(add(10, ""));
-
-/*
-const input1Element: HTMLInputElement = document.querySelector("#input1");
-const input2Element: HTMLInputElement = document.querySelector("#input2");
-
-const addButtonElement = document.querySelector("button");
-
-const add = (v1: number, v2: number) => v1 + v2;
-
-addButtonElement.addEventListener("click", () => {
-    const sum = add(Number(input1Element.value), Number(input2Element.value));
-    console.log(sum);
-});
-*/
